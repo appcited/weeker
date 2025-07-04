@@ -7,7 +7,8 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "folke.vscode-monorepo-workspace"
+        "folke.vscode-monorepo-workspace",
+        "redhat.vscode-yaml"
       ]
     }
   }
