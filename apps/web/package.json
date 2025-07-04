@@ -1,0 +1,10 @@
+{
+  "name": "@weeker/web",
+  "type": "module",
+  "dependencies": {
+    "astro": "^5.11.0"
+  },
+  "devDependencies": {
+    "@weeker/logo": "workspace:*"
+  }
+}
