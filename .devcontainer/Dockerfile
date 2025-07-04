@@ -27,10 +27,14 @@ RUN apt-get install -y --no-install-recommends \
     xz-utils \
     git
 
-# install node.js
+# node.js
 RUN curl -fsSL https://deb.nodesource.com/setup_23.x | bash - && \
     apt-get install -y --no-install-recommends \
     nodejs
+
+# pnpm
+ENV PNPM_VERSION=10.12.4
+RUN npm install -g pnpm@${PNPM_VERSION}
 
 # cleanup
 RUN apt-get autoremove -y && \
