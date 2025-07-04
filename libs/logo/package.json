@@ -1,0 +1,7 @@
+{
+  "name": "@weeker/logo",
+  "files": ["dist"],
+  "exports": {
+    "./*": "./dist/*"
+  }
+}
