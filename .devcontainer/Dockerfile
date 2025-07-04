@@ -27,6 +27,11 @@ RUN apt-get install -y --no-install-recommends \
     xz-utils \
     git
 
+# shx
+ENV SHX_VERSION=0.1.0
+RUN curl -fsSL https://raw.githubusercontent.com/appcited/shx/refs/tags/v${SHX_VERSION}/shx -o /usr/local/bin/shx && \
+    chmod +x /usr/local/bin/shx
+
 # node.js
 RUN curl -fsSL https://deb.nodesource.com/setup_23.x | bash - && \
     apt-get install -y --no-install-recommends \
