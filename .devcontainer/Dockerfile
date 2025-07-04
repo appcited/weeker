@@ -16,6 +16,10 @@ ARG NON_ROOT_USER_GID=1000
 RUN groupadd --gid ${NON_ROOT_USER_GID} ${NON_ROOT_USER} && \
     useradd ${NON_ROOT_USER} --uid ${NON_ROOT_USER_UID} --gid ${NON_ROOT_USER_GID} --create-home
 
+# add user to docker group
+RUN groupadd -g 800 docker && \
+    usermod -aG docker ${NON_ROOT_USER}
+
 # update package sources
 RUN apt-get update && \
     apt-get upgrade -y

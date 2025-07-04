@@ -1,9 +1,8 @@
 {
   "dockerComposeFile": "compose.yaml",
-  "workspaceFolder": "/workspaces/weeker",
+  "workspaceFolder": "/workspace",
   "service": "devcontainer",
-  "postStartCommand": "run/init",
-  "containerUser": "dev",
+  "postStartCommand": "shx run/init",
   "customizations": {
     "vscode": {
       "extensions": [
