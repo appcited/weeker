@@ -1,0 +1,14 @@
+{
+  "dockerComposeFile": "compose.yaml",
+  "workspaceFolder": "/workspaces/weeker",
+  "service": "devcontainer",
+  "postStartCommand": "run/init",
+  "containerUser": "dev",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "folke.vscode-monorepo-workspace"
+      ]
+    }
+  }
+}
