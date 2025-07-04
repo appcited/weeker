@@ -5,5 +5,8 @@ dist/
 node_modules/
 .pnpm-store/
 
+# nx
+.nx/
+
 # astro
 .astro/

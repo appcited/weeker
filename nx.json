@@ -1,0 +1,75 @@
+{
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "defaultBase": "main",
+  "namedInputs": {
+    "sharedGlobals": [
+      "{workspaceRoot}/.devcontainer/**/*",
+      "{workspaceRoot}/.github/**/*",
+      "{workspaceRoot}/run/**/*",
+      "{workspaceRoot}/*"
+    ],
+    "default": [
+      "sharedGlobals",
+      { "dependentTasksOutputFiles": "**/*" },
+      "{projectRoot}/**/*"
+    ]
+  },
+  "targetDefaults": {
+    "ci": {
+      "executor": "nx:noop",
+      "dependsOn": ["check", "build", "test", "pack"],
+      "cache": true
+    },
+    "init": {
+      "dependsOn": ["^init"],
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "{projectRoot}",
+        "command": "shx run/init"
+      },
+      "cache": true,
+      "inputs": ["default"]
+    },
+    "check": {
+      "dependsOn": ["init", "^build"],
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "{projectRoot}",
+        "command": "shx run/check"
+      },
+      "cache": true,
+      "inputs": ["default"]
+    },
+    "build": {
+      "dependsOn": ["init", "^build"],
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "{projectRoot}",
+        "command": "shx run/build"
+      },
+      "cache": true,
+      "inputs": ["default"],
+      "outputs": ["{projectRoot}/dist"]
+    },
+    "test": {
+      "dependsOn": ["init"],
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "{projectRoot}",
+        "command": "shx run/test"
+      },
+      "cache": true,
+      "inputs": ["default"]
+    },
+    "dev": {
+      "dependsOn": ["init", "build"],
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "{projectRoot}",
+        "command": "shx run/dev"
+      },
+      "inputs": ["default"],
+      "continuous": true
+    }
+  }
+}

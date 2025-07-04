@@ -1,6 +1,13 @@
 {
   "name": "@weeker/web",
   "type": "module",
+  "nx": {
+    "targets": {
+      "ci": {},
+      "build": {},
+      "dev": {}
+    }
+  },
   "dependencies": {
     "astro": "^5.11.0"
   },
