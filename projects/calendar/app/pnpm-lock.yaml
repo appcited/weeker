@@ -15,6 +15,9 @@ importers:
       '@weeker/shared-logo':
         specifier: workspace:*
         version: link:../../shared/logo
+      '@weeker/shared-typescript':
+        specifier: workspace:*
+        version: link:../../shared/typescript
 
 packages:
 

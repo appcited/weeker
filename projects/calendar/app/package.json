@@ -12,6 +12,7 @@
     "astro": "^5.11.0"
   },
   "devDependencies": {
-    "@weeker/shared-logo": "workspace:*"
+    "@weeker/shared-logo": "workspace:*",
+    "@weeker/shared-typescript": "workspace:*"
   }
 }
