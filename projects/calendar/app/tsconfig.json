@@ -1,5 +1,5 @@
 {
-  "extends": "@weeker/shared-typescript/tsconfig.app.web.json",
+  "extends": "@weeker/shared-typescript/tsconfig.web.json",
   "include": [".astro/types.d.ts", "**/*"],
   "exclude": ["dist"]
 }
