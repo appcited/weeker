@@ -14,7 +14,7 @@ importers:
     devDependencies:
       '@weeker/logo':
         specifier: workspace:*
-        version: link:../../libs/logo
+        version: link:../../shared/logo
 
 packages:
 
