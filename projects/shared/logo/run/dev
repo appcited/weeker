@@ -3,4 +3,5 @@ set -euo pipefail
 
 # needed for nx watch mode: https://github.com/lerna/lerna/issues/4054#issuecomment-2598693480
 export NX_DAEMON=true
-npx nx watch --includeDependentProjects --projects @weeker/shared-logo -- npx nx run @weeker/shared-logo:build
+export PROJECT_NAME=$(jq -r '.name' package.json)
+npx nx watch --includeDependentProjects --projects $PROJECT_NAME -- shx run/build
