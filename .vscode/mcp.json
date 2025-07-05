@@ -1,7 +1,7 @@
 {
   "servers": {
     "nx-mcp": {
-      "command": "npx",
+      "command": "pnpm",
       "args": ["nx-mcp"]
     }
   }

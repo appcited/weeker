@@ -1,4 +1,4 @@
 #!/bin/bash
 set -euo pipefail
 
-npx astro build
+pnpm astro build
