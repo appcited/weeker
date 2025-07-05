@@ -1,0 +1,19 @@
+{
+  "name": "@weeker/shared-typescript",
+  "type": "module",
+  "nx": {
+    "targets": {
+      "ci": {},
+      "build": {},
+      "dev": {}
+    }
+  },
+  "files": ["dist"],
+  "exports": {
+    "./*": "./dist/*"
+  },
+  "peerDependencies": {
+    "@types/node": "^24.0.10",
+    "typescript": "~5.8.0"
+  }
+}
