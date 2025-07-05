@@ -37,7 +37,7 @@ RUN curl -fsSL https://raw.githubusercontent.com/appcited/shx/refs/tags/v${SHX_V
     chmod +x /usr/local/bin/shx
 
 # node.js
-RUN curl -fsSL https://deb.nodesource.com/setup_23.x | bash - && \
+RUN curl -fsSL https://deb.nodesource.com/setup_24.x | bash - && \
     apt-get install -y --no-install-recommends \
     nodejs
 
