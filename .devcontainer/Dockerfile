@@ -29,7 +29,8 @@ RUN apt-get install -y --no-install-recommends \
     ca-certificates \
     curl \
     xz-utils \
-    git
+    git \
+    jq
 
 # shx
 ENV SHX_VERSION=0.1.0
