@@ -1,5 +1,6 @@
 {
-  "name": "@weeker/logo",
+  "name": "@weeker/shared-logo",
+  "type": "module",
   "nx": {
     "targets": {
       "ci": {},

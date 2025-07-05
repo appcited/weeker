@@ -12,7 +12,7 @@ importers:
         specifier: ^5.11.0
         version: 5.11.0(@types/node@24.0.10)(rollup@4.44.2)(typescript@5.8.3)
     devDependencies:
-      '@weeker/logo':
+      '@weeker/shared-logo':
         specifier: workspace:*
         version: link:../../shared/logo
 
