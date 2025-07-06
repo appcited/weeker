@@ -27,8 +27,12 @@ RUN apt-get update && \
 # install common tools
 RUN apt-get install -y --no-install-recommends \
     ca-certificates \
+    gnupg \
+    lsb-release \
     curl \
     xz-utils \
+    # for envsubst
+    gettext \
     git \
     jq
 
@@ -37,6 +41,34 @@ RUN apt-get install -y --no-install-recommends \
 ENV SHX_VERSION=0.1.0
 RUN curl -fsSL https://raw.githubusercontent.com/appcited/shx/refs/tags/v${SHX_VERSION}/shx -o /usr/local/bin/shx && \
     chmod +x /usr/local/bin/shx
+
+# docker
+# renovate: source=github-tags name=docker/cli versioning=semver
+ENV DOCKER_VERSION=27.4.1
+# renovate: source=github-tags name=docker/compose versioning=semver
+ENV DOCKER_COMPOSE_VERSION=2.31.0
+# renovate: source=github-tags name=docker/buildx versioning=semver
+ENV DOCKER_BUILDX_VERSION=0.19.3
+RUN curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add - && \
+    echo "deb https://download.docker.com/linux/debian $(lsb_release -cs) stable" > /etc/apt/sources.list.d/docker.list && \
+    apt-get update && \
+    apt-get install -y --no-install-recommends \
+        docker-ce="5:${DOCKER_VERSION}"* \
+        docker-ce-cli="5:${DOCKER_VERSION}"* \
+        docker-compose-plugin="${DOCKER_COMPOSE_VERSION}"* \
+        docker-buildx-plugin="${DOCKER_BUILDX_VERSION}"*
+# workaround for using docker.socket as non-root user in github codespaces (uses docker group id 800)
+# https://github.com/microsoft/vscode-dev-containers/tree/main/containers/docker-from-docker#enabling-non-root-access-to-docker-in-the-container
+RUN groupmod -g 800 docker && \
+    usermod -aG docker ${NON_ROOT_USER}
+
+## github cli
+# renovate: source=github-tags name=cli/cli versioning=semver
+ENV GITHUB_CLI_VERSION=2.74.2
+RUN curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | apt-key add - && \
+    echo "deb https://cli.github.com/packages stable main" > /etc/apt/sources.list.d/github-cli.list && \
+    apt-get update && \
+    apt-get install -y --no-install-recommends gh="${GITHUB_CLI_VERSION}"*
 
 # node.js
 # TODO: find a way to pin version and update it with renovate
