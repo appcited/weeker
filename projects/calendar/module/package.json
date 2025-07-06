@@ -1,0 +1,33 @@
+{
+  "name": "@weeker/calendar-module",
+  "type": "module",
+  "nx": {
+    "targets": {
+      "ci": {},
+      "check": {},
+      "build": {},
+      "dev": {}
+    }
+  },
+  "files": ["dist"],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./index.css": "./dist/index.css"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@vitejs/plugin-vue": "^6.0.0",
+    "@weeker/shared-typescript": "workspace:*",
+    "@weeker/calendar-module": "workspace:*",
+    "vite": "^7.0.0",
+    "vite-plugin-vue-devtools": "^7.7.7",
+    "vue-tsc": "^3.0.0"
+  }
+}
