@@ -5,8 +5,7 @@
     "targets": {
       "ci": {},
       "check": {},
-      "build": {},
-      "dev": {}
+      "build": {}
     }
   },
   "files": ["dist"],

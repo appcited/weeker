@@ -4,8 +4,7 @@
   "nx": {
     "targets": {
       "ci": {},
-      "build": {},
-      "dev": {}
+      "build": {}
     }
   },
   "files": [

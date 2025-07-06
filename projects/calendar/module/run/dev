@@ -1,5 +1,0 @@
-#!/bin/bash
-set -euo pipefail
-
-pnpm vite build --watch & \
-pnpm vue-tsc -p tsconfig.src.json --preserveWatchOutput --noEmit false --watch

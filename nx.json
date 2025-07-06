@@ -76,13 +76,13 @@
       },
       "cache": true
     },
-    "dev": {
-      "dependsOn": ["init", "build"],
+    "start": {
+      "dependsOn": ["init", "generate", "^build"],
       "inputs": ["default"],
       "executor": "nx:run-commands",
       "options": {
         "cwd": "{projectRoot}",
-        "command": "shx run/dev"
+        "command": "shx run/start"
       },
       "continuous": true
     }
