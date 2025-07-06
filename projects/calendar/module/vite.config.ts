@@ -12,7 +12,7 @@ export default defineConfig({
     minify: false,
     lib: {
       entry: "src",
-      cssFileName: "index",
+      cssFileName: "style",
     },
     rollupOptions: {
       external: Object.keys(packageJson.peerDependencies).map(lib => new RegExp(`^${lib}`)),
