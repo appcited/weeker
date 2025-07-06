@@ -24,7 +24,6 @@
     "@types/node": "^24.0.0",
     "@vitejs/plugin-vue": "^6.0.0",
     "@weeker/shared-typescript": "workspace:*",
-    "@weeker/calendar-module": "workspace:*",
     "vite": "^7.0.0",
     "vite-plugin-vue-devtools": "^7.7.7",
     "vue-tsc": "^3.0.0"
