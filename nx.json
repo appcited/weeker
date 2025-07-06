@@ -16,7 +16,7 @@
   },
   "targetDefaults": {
     "ci": {
-      "dependsOn": ["check", "build", "test", "pack"],
+      "dependsOn": ["check", "build", "test"],
       "executor": "nx:noop",
       "cache": true
     },
@@ -30,8 +30,23 @@
       },
       "cache": true
     },
-    "check": {
+    "generate": {
       "dependsOn": ["init", "^build"],
+      "inputs": ["default"],
+      "outputs": [
+        "{projectRoot}/**/generated",
+        "{projectRoot}/**/*.generated.*"
+      ],
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "{projectRoot}",
+        "command": "shx run/generate"
+      },
+      "cache": true
+      
+    },
+    "check": {
+      "dependsOn": ["init", "generate", "^build"],
       "inputs": ["default"],
       "executor": "nx:run-commands",
       "options": {
@@ -41,7 +56,7 @@
       "cache": true
     },
     "build": {
-      "dependsOn": ["init", "^build"],
+      "dependsOn": ["init", "generate", "^build"],
       "inputs": ["default"],
       "outputs": ["{projectRoot}/dist"],
       "executor": "nx:run-commands",
@@ -52,7 +67,7 @@
       "cache": true
     },
     "test": {
-      "dependsOn": ["init"],
+      "dependsOn": ["init", "generate", "^build"],
       "inputs": ["default"],
       "executor": "nx:run-commands",
       "options": {
