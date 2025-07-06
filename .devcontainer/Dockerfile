@@ -68,7 +68,8 @@ ENV GITHUB_CLI_VERSION=2.74.2
 RUN curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | apt-key add - && \
     echo "deb https://cli.github.com/packages stable main" > /etc/apt/sources.list.d/github-cli.list && \
     apt-get update && \
-    apt-get install -y --no-install-recommends gh="${GITHUB_CLI_VERSION}"*
+    apt-get install -y --no-install-recommends \
+        gh="${GITHUB_CLI_VERSION}"*
 
 # node.js
 # TODO: find a way to pin version and update it with renovate
