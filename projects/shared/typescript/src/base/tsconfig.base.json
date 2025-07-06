@@ -1,17 +1,30 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    "strict": true,
     "module": "ESNext",
     "target": "ESNext",
-    "moduleResolution": "Bundler",
-    "verbatimModuleSyntax": true,
-    "noEmit": true,
-    "resolveJsonModule": true,
     "checkJs": true,
     "skipLibCheck": true,
+    "jsx": "preserve",
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
+    "resolveJsonModule": true,
+    "noEmit": true,
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
-    "jsx": "preserve"
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* Cache */
+    "tsBuildInfoFile": "${configDir}/node_modules/.tmp/tsconfig.app.tsbuildinfo",
   }
 }
