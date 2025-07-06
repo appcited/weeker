@@ -16,59 +16,59 @@
   },
   "targetDefaults": {
     "ci": {
-      "executor": "nx:noop",
       "dependsOn": ["check", "build", "test", "pack"],
+      "executor": "nx:noop",
       "cache": true
     },
     "init": {
       "dependsOn": ["^init"],
+      "inputs": ["default"],
       "executor": "nx:run-commands",
       "options": {
         "cwd": "{projectRoot}",
         "command": "shx run/init"
       },
-      "cache": true,
-      "inputs": ["default"]
+      "cache": true
     },
     "check": {
       "dependsOn": ["init", "^build"],
+      "inputs": ["default"],
       "executor": "nx:run-commands",
       "options": {
         "cwd": "{projectRoot}",
         "command": "shx run/check"
       },
-      "cache": true,
-      "inputs": ["default"]
+      "cache": true
     },
     "build": {
       "dependsOn": ["init", "^build"],
+      "inputs": ["default"],
+      "outputs": ["{projectRoot}/dist"],
       "executor": "nx:run-commands",
       "options": {
         "cwd": "{projectRoot}",
         "command": "shx run/build"
       },
-      "cache": true,
-      "inputs": ["default"],
-      "outputs": ["{projectRoot}/dist"]
+      "cache": true
     },
     "test": {
       "dependsOn": ["init"],
+      "inputs": ["default"],
       "executor": "nx:run-commands",
       "options": {
         "cwd": "{projectRoot}",
         "command": "shx run/test"
       },
-      "cache": true,
-      "inputs": ["default"]
+      "cache": true
     },
     "dev": {
       "dependsOn": ["init", "build"],
+      "inputs": ["default"],
       "executor": "nx:run-commands",
       "options": {
         "cwd": "{projectRoot}",
         "command": "shx run/dev"
       },
-      "inputs": ["default"],
       "continuous": true
     }
   }
