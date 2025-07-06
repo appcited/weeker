@@ -29,6 +29,9 @@ jobs:
           imageName: ghcr.io/appcited/weeker/devcontainer
           imageTag: latest-${{ matrix.platform.name }}
           cacheFrom: ghcr.io/appcited/weeker/devcontainer:latest-${{ matrix.platform.name }}
+          env: |
+            GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
           push: always
           runCmd: |
             shx run/ci
+            shx run/publish

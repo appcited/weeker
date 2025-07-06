@@ -1,6 +1,9 @@
 # build
 dist/
 
+# pack
+pack/
+
 # dependencies
 node_modules/
 .pnpm-store/

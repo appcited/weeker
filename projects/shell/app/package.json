@@ -5,6 +5,9 @@
     "targets": {
       "ci": {},
       "build": {},
+      "check": {},
+      "pack": {},
+      "publish": {},
       "start": {}
     }
   },
@@ -14,12 +17,13 @@
   "devDependencies": {
     "@astrojs/check": "^0.9.4",
     "@astrojs/vue": "^5.1.0",
+    "@astrojs/node": "^9.3.0",
     "@types/node": "^24.0.0",
     "@weeker/shared-logo": "workspace:*",
     "@weeker/shared-typescript": "workspace:*",
     "@weeker/calendar-module": "workspace:*",
     "@weeker/about-module": "workspace:*",
-    "typescript": "^5.8.3",
-    "astro": "^5.11.0"
+    "astro": "^5.11.0",
+    "typescript": "^5.8.3"
   }
 }

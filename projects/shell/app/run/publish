@@ -1,0 +1,11 @@
+#!/bin/bash
+set -euo pipefail
+
+# TODO: centralize these variable
+export ARCH=$(dpkg --print-architecture)
+
+# TODO: use .shxrc
+export DOCKER_TAG="ghcr.io/appcited/weeker/shell-app:main-${ARCH}"
+
+docker load < pack/shell-app.tar.gz
+docker push "${DOCKER_TAG}"
