@@ -1,13 +1,11 @@
-name: main
+name: pr
 on:
-  push:
-    branches:
-      - main
+  pull_request:
 jobs:
-  main:
+  pr:
     permissions:
       contents: read
-      packages: write
+      packages: read
     strategy:
       matrix:
         platform:
@@ -29,8 +27,6 @@ jobs:
           imageName: ghcr.io/appcited/weeker/devcontainer
           imageTag: latest-${{ matrix.platform.name }}
           cacheFrom: ghcr.io/appcited/weeker/devcontainer:latest-${{ matrix.platform.name }}
-          push: always
-          env: |
-            GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
+          push: never
           runCmd: |
             shx run/ci
