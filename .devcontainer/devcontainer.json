@@ -7,7 +7,9 @@
     "vscode": {
       "extensions": [
         "folke.vscode-monorepo-workspace",
-        "redhat.vscode-yaml"
+        "redhat.vscode-yaml",
+        "Vue.volar",
+        "astro-build.astro-vscode"
       ]
     }
   }
