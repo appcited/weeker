@@ -33,16 +33,19 @@ RUN apt-get install -y --no-install-recommends \
     jq
 
 # shx
+# renovate: source=github-tags name=appcited/shx versioning=semver
 ENV SHX_VERSION=0.1.0
 RUN curl -fsSL https://raw.githubusercontent.com/appcited/shx/refs/tags/v${SHX_VERSION}/shx -o /usr/local/bin/shx && \
     chmod +x /usr/local/bin/shx
 
 # node.js
+# TODO: find a way to pin version and update it with renovate
 RUN curl -fsSL https://deb.nodesource.com/setup_24.x | bash - && \
     apt-get install -y --no-install-recommends \
     nodejs
 
 # pnpm
+# renovate: source=github-tags name=pnpm/pnpm versioning=semver
 ENV PNPM_VERSION=10.12.4
 RUN npm install -g pnpm@${PNPM_VERSION}
 

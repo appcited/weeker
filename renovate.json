@@ -1,0 +1,121 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "gitAuthor": "Renovate Bot <bot@renovateapp.com>",
+  "semanticCommits": "enabled",
+  "platformAutomerge": true,
+  "dependencyDashboard": true,
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true,
+    "schedule": [
+      "before 3am"
+    ]
+  },
+  "packageRules": [
+    {
+      "addLabels": [
+        "patch"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "pin",
+        "digest"
+      ],
+      "automerge": true
+    },
+    {
+      "addLabels": [
+        "minor"
+      ],
+      "matchUpdateTypes": [
+        "minor"
+      ],
+      "automerge": false
+    },
+    {
+      "addLabels": [
+        "major"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "automerge": false
+    },
+    {
+      "groupName": "node",
+      "matchPackageNames": [
+        "node",
+        "nodejs/node",
+        "@types/node"
+      ]
+    },
+    {
+      "groupName": "vite",
+      "matchPackageNames": [
+        "vite",
+        "/^@vitejs/*/"
+      ]
+    },
+    {
+      "groupName": "vitest",
+      "matchPackageNames": [
+        "vitest",
+        "vite-node",
+        "/^@vitest/*/"
+      ]
+    },
+    {
+      "groupName": "vue",
+      "matchPackageNames": [
+        "vue",
+        "@vue/compiler-dom"
+      ]
+    },
+    {
+      "groupName": "typescript-eslint",
+      "matchPackageNames": [
+        "/^@typescript-eslint/*/"
+      ]
+    },
+    {
+      "groupName": "commitlint",
+      "matchPackageNames": [
+        "/^@commitlint/*/"
+      ]
+    },
+    {
+      "groupName": "playwright",
+      "matchPackageNames": [
+        "playwright",
+        "microsoft/playwright",
+        "/^@playwright/*/"
+      ]
+    },
+    {
+      "groupName": "astro",
+      "matchPackageNames": [
+        "astro",
+        "/^@astrojs/*/"
+      ]
+    },
+    {
+      "groupName": "vueuse",
+      "matchPackageNames": [
+        "/^@vueuse/*/"
+      ]
+    }
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": [
+        ".*"
+      ],
+      "matchStrings": [
+        "# renovate: source=(?<datasource>.*?) name=(?<depName>.*?) versioning=(?<versioning>.*?)\\s.*_(VERSION|TAG)=(?<currentValue>.*)"
+      ],
+      "versioningTemplate": "{{versioning}}",
+      "extractVersionTemplate": "^v(?<version>.*)$"
+    }
+  ]
+}
