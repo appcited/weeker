@@ -1,5 +1,11 @@
 {
-  "extends": "@weeker/shared-typescript/tsconfig.web.json",
-  "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["dist"]
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.build.json"
+    },
+    {
+      "path": "./tsconfig.src.json"
+    }
+  ]
 }

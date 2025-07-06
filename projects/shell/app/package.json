@@ -9,10 +9,16 @@
     }
   },
   "dependencies": {
-    "astro": "^5.11.0"
+    "vue": "^3.5.17"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/vue": "^5.1.0",
+    "@types/node": "^24.0.0",
     "@weeker/shared-logo": "workspace:*",
-    "@weeker/shared-typescript": "workspace:*"
+    "@weeker/shared-typescript": "workspace:*",
+    "@weeker/calendar-module": "workspace:*",
+    "typescript": "^5.8.3",
+    "astro": "^5.11.0"
   }
 }
