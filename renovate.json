@@ -108,8 +108,8 @@
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": [
-        ".*"
+      "managerFilePatterns": [
+        "/.*/"
       ],
       "matchStrings": [
         "# renovate: source=(?<datasource>.*?) name=(?<depName>.*?) versioning=(?<versioning>.*?)\\s.*_(VERSION|TAG)=(?<currentValue>.*)"
