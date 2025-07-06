@@ -9,7 +9,8 @@
         "folke.vscode-monorepo-workspace",
         "redhat.vscode-yaml",
         "Vue.volar",
-        "astro-build.astro-vscode"
+        "astro-build.astro-vscode",
+        "nrwl.angular-console"
       ]
     }
   }
