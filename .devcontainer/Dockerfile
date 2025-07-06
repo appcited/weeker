@@ -72,10 +72,12 @@ RUN curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | a
         gh="${GITHUB_CLI_VERSION}"*
 
 # node.js
-# TODO: find a way to pin version and update it with renovate
-RUN curl -fsSL https://deb.nodesource.com/setup_24.x | bash - && \
+# renovate: source=github-tags name=nodejs/node versioning=semver
+ENV NODE_VERSION=24.3.0
+RUN NODE_MAJOR_VERSION=$(echo ${NODE_VERSION} | cut -d. -f1) && \
+    curl -fsSL "https://deb.nodesource.com/setup_${NODE_MAJOR_VERSION}.x" | bash - && \
     apt-get install -y --no-install-recommends \
-    nodejs
+    nodejs="${NODE_VERSION}"*
 
 # pnpm
 # renovate: source=github-tags name=pnpm/pnpm versioning=semver
