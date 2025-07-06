@@ -18,6 +18,7 @@
     "@weeker/shared-logo": "workspace:*",
     "@weeker/shared-typescript": "workspace:*",
     "@weeker/calendar-module": "workspace:*",
+    "@weeker/about-module": "workspace:*",
     "typescript": "^5.8.3",
     "astro": "^5.11.0"
   }

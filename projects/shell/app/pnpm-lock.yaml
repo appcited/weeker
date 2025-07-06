@@ -21,6 +21,9 @@ importers:
       '@types/node':
         specifier: ^24.0.0
         version: 24.0.10
+      '@weeker/about-module':
+        specifier: workspace:*
+        version: link:../../about/module
       '@weeker/calendar-module':
         specifier: workspace:*
         version: link:../../calendar/module
