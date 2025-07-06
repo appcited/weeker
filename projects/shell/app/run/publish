@@ -5,6 +5,7 @@ set -euo pipefail
 export ARCH=$(dpkg --print-architecture)
 
 # TODO: use .shxrc
+# TODO: use multi-arch build
 export DOCKER_TAG="ghcr.io/appcited/weeker/shell-app:main-${ARCH}"
 
 docker load < pack/shell-app.tar.gz
