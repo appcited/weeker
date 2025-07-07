@@ -1,5 +1,5 @@
 {
-  "name": "@weeker/shell-app",
+  "name": "@weeker/web",
   "type": "module",
   "nx": {
     "targets": {
