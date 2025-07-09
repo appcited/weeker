@@ -5,11 +5,11 @@ set -euo pipefail
 export ARCH=$(dpkg --print-architecture)
 
 # TODO: use .shxrc
-export DOCKER_TAG="ghcr.io/appcited/weeker/shell-app:main-${ARCH}"
+export DOCKER_TAG="ghcr.io/appcited/weeker/web:main-${ARCH}"
 
 mkdir -p pack
 docker build \
     --build-arg NODE_VERSION="${NODE_VERSION}" \
     --build-arg PNPM_VERSION="${PNPM_VERSION}" \
     --tag "${DOCKER_TAG}" .
-docker image save "${DOCKER_TAG}" | gzip > pack/shell-app.tar.gz
+docker image save "${DOCKER_TAG}" | gzip > pack/web.tar.gz

@@ -6,7 +6,7 @@ export ARCH=$(dpkg --print-architecture)
 
 # TODO: use .shxrc
 # TODO: use multi-arch build
-export DOCKER_TAG="ghcr.io/appcited/weeker/shell-app:main-${ARCH}"
+export DOCKER_TAG="ghcr.io/appcited/weeker/web:main-${ARCH}"
 
-docker load < pack/shell-app.tar.gz
+docker load < pack/web.tar.gz
 docker push "${DOCKER_TAG}"
