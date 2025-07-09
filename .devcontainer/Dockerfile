@@ -64,12 +64,10 @@ RUN groupmod -g 800 docker && \
 
 ## github cli
 # renovate: source=github-tags name=cli/cli versioning=semver
-ENV GITHUB_CLI_VERSION=2.74.2
-RUN curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | apt-key add - && \
-    echo "deb https://cli.github.com/packages stable main" > /etc/apt/sources.list.d/github-cli.list && \
-    apt-get update && \
-    apt-get install -y --no-install-recommends \
-        gh="${GITHUB_CLI_VERSION}"*
+ENV GH_VERSION=2.74.2
+RUN ARCH=$(dpkg --print-architecture) && \
+    curl -fsSL https://github.com/cli/cli/releases/download/v${GH_VERSION}/gh_${GH_VERSION}_linux_${ARCH}.deb -o /tmp/gh.deb && \
+    apt-get install /tmp/gh.deb
 
 # node.js
 # renovate: source=github-tags name=nodejs/node versioning=semver
