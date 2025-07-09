@@ -1,4 +1,4 @@
 #!/bin/bash
 set -euo pipefail
 
-pnpm nx run-many --target ci --output-style stream
+pnpm nx run ci --output-style stream

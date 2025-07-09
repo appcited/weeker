@@ -2,6 +2,11 @@
   "name": "weeker",
   "nx": {
     "targets": {
+      "ci": {
+        "executor": "nx:noop",
+        "cache": true,
+        "dependsOn": [{ "projects": "@weeker/*", "target": "ci" }]
+      },
       "auth:github": {
         "executor": "nx:run-commands",
         "options": {
