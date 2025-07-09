@@ -79,7 +79,7 @@ RUN NODE_MAJOR_VERSION=$(echo ${NODE_VERSION} | cut -d. -f1) && \
 
 # pnpm
 # renovate: source=github-tags name=pnpm/pnpm versioning=semver
-ENV PNPM_VERSION=10.12.4
+ENV PNPM_VERSION=10.13.1
 RUN npm install -g pnpm@${PNPM_VERSION}
 
 # cleanup
