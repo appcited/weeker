@@ -1,5 +1,12 @@
 # Development
 
+## Quick start
+To get started with development, follow these steps:
+
+1. Clone git repository, open it in your [IDE](#ide) inside a [dev container](#dev-containers)
+2. Run script `run/dev` to start all projects in development mode
+3. Run script `run/ci` to trigger local ci (build, check and test)
+
 ## System requirements
 
 You MAY use Linux, macOS or Windows as development OS with AMD64 or ARM64 processor architecture. For Windows you MUST use [WSL 2](https://docs.docker.com/desktop/wsl/).
