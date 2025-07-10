@@ -1,4 +1,4 @@
 #!/bin/bash
 set -euo pipefail
 
-pnpm nuxt dev --host
+pnpm nuxt dev --host --inspect
