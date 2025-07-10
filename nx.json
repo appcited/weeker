@@ -16,8 +16,18 @@
   },
   "targetDefaults": {
     "ci": {
-      "dependsOn": ["check", "build", "test", "pack"],
+      "dependsOn": ["check", "build", "test"],
       "executor": "nx:noop",
+      "cache": true
+    },
+    "publish": {
+      "dependsOn": ["ci", "pack", { "projects": "weeker", "target": "auth:github" }],
+      "inputs": ["default"],
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "{projectRoot}",
+        "command": "shx run/publish"
+      },
       "cache": true
     },
     "init": {
@@ -84,16 +94,6 @@
       "options": {
         "cwd": "{projectRoot}",
         "command": "shx run/pack"
-      },
-      "cache": true
-    },
-    "publish": {
-      "dependsOn": ["ci", { "projects": "weeker", "target": "auth:github" }],
-      "inputs": ["default"],
-      "executor": "nx:run-commands",
-      "options": {
-        "cwd": "{projectRoot}",
-        "command": "shx run/publish"
       },
       "cache": true
     },
