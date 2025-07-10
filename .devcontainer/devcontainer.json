@@ -16,7 +16,8 @@
         "redhat.vscode-yaml",
         "Vue.volar",
         "astro-build.astro-vscode",
-        "nrwl.angular-console"
+        "nrwl.angular-console",
+        "ms-azuretools.vscode-containers"
       ]
     }
   }
