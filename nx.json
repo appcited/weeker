@@ -58,7 +58,7 @@
     "build": {
       "dependsOn": ["init", "generate", "^build"],
       "inputs": ["default"],
-      "outputs": ["{projectRoot}/dist"],
+      "outputs": ["{projectRoot}/.output", "{projectRoot}/dist"],
       "executor": "nx:run-commands",
       "options": {
         "cwd": "{projectRoot}",

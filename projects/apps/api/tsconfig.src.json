@@ -1,9 +1,0 @@
-{
-  "extends": "@weeker/shared-typescript/tsconfig.node.json",
-  "include": ["src/**/*", "src/**/*.json"],
-  "exclude": ["src/**/*.spec.ts", "src/**/*.test.ts"],
-  "compilerOptions": {
-    "rootDir": "src",
-    "outDir": "dist"
-  }
-}
