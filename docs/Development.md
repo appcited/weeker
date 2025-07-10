@@ -4,7 +4,7 @@
 
 You MAY use Linux, macOS or Windows as development OS with AMD64 or ARM64 processor architecture. For Windows you MUST use [WSL 2](https://docs.docker.com/desktop/wsl/).
 
-It is REQUIRED to install a [supported container runtime](https://code.visualstudio.com/docs/devcontainers/containers#_system-requirements) including [Docker](https://docs.docker.com/get-docker/) and [Podman](https://podman.io). It is also REQUIRED to use an extension supporting [Compose](https://compose-spec.io/) like [Docker Compose](https://docs.docker.com/compose/install/) or [Podman Compose](https://podman-desktop.io/docs/compose/setting-up-compose).
+It is REQUIRED to install a [supported container runtime](https://code.visualstudio.com/docs/devcontainers/containers#_system-requirements) including [Docker](https://docs.docker.com/get-docker/) and [Podman](https://podman.io).
 
 ## Dev containers
 
@@ -18,9 +18,10 @@ You MAY use [any IDE which supports dev containers](https://containers.dev/suppo
 
 ## Run commands / targets
 
-This project uses [Nx](https://nx.dev/) to define and manage targets along with their dependencies. 
+This project uses [Nx](https://nx.dev/) to define and manage targets along with their dependencies.
 
 You CAN run Nx targets using the bash scripts in the `run` directory. The following commands are available:
+
 - `run/ci`: Runs all CI pipeline targets
 - `run/dev`: Starts all projects in development mode
 - `run/init`: Initializes the environment (e.g., installs dependencies)
