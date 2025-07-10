@@ -8,10 +8,8 @@
       "url": "http://localhost:3000",
       "sourceMaps": true,
       "sourceMapPathOverrides": {
-        // "http://localhost:3000/_nuxt/@fs/*": "${workspaceFolder}/../..",
-        "http://localhost:3000/_nuxt/*": "${workspaceFolder}/app/*",
-        "http://localhost:3000/_nuxt/@fs/*/projects/calendar/module/src/*": "${workspaceFolder}/../../calendar/module/src/*",
-        "http://localhost:3000/_nuxt/@fs/*/projects/about/module/src/*": "${workspaceFolder}/../../about/module/src/*",
+        "http://localhost:3000/_nuxt/@fs/workspaces/weeker/*": "${workspaceFolder}/*",
+        "http://localhost:3000/_nuxt/*": "${workspaceFolder}/projects/apps/host/app/*",
       }
     },
     {
