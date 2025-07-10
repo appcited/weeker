@@ -13,30 +13,30 @@
   },
   "packageRules": [
     {
-      "addLabels": [
-        "patch"
-      ],
       "matchUpdateTypes": [
         "patch",
         "pin",
         "digest"
       ],
+      "addLabels": [
+        "patch"
+      ],
       "automerge": true
     },
     {
-      "addLabels": [
+      "matchUpdateTypes": [
         "minor"
       ],
-      "matchUpdateTypes": [
+      "addLabels": [
         "minor"
       ],
       "automerge": false
     },
     {
-      "addLabels": [
+      "matchUpdateTypes": [
         "major"
       ],
-      "matchUpdateTypes": [
+      "addLabels": [
         "major"
       ],
       "automerge": false
@@ -108,11 +108,11 @@
   "customManagers": [
     {
       "customType": "regex",
-      "managerFilePatterns": [
-        "/.*/"
-      ],
       "matchStrings": [
         "# renovate: source=(?<datasource>.*?) name=(?<depName>.*?) versioning=(?<versioning>.*?)\\s.*_(VERSION|TAG)=(?<currentValue>.*)"
+      ],
+      "managerFilePatterns": [
+        "/.*/"
       ],
       "versioningTemplate": "{{versioning}}",
       "extractVersionTemplate": "^v(?<version>.*)$"
