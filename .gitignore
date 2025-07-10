@@ -5,8 +5,13 @@ generated/
 # cache
 .cache/
 
+# logs
+logs
+*.log
+
 # build
 dist/
+.output/
 
 # pack
 pack/
@@ -18,5 +23,6 @@ node_modules/
 # nx
 .nx/
 
-# astro
-.astro/
+# nuxt
+.nuxt/
+.nitro/
