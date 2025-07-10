@@ -10,6 +10,7 @@ export default defineConfig({
     emptyOutDir: false,
     target: "esnext",
     minify: false,
+    sourcemap: true,
     lib: {
       entry: "src",
       cssFileName: "style",
