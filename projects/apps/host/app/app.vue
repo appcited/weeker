@@ -1,17 +1,3 @@
-<template>
-	<NuxtPage />
-</template>
-
-<style lang="css">
-html,
-body,
-#__nuxt {
-	margin: 0;
-	width: 100%;
-	height: 100%;
-}
-</style>
-
 <script setup lang="ts">
 import logoMini from '@weeker/shared-logo/logo-mini.svg?url';
 
@@ -26,3 +12,18 @@ useHead({
 	],
 })
 </script>
+
+<template>
+	<NuxtPage />
+</template>
+
+<style lang="css">
+html,
+body,
+#__nuxt {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+}
+</style>
+
