@@ -7,6 +7,10 @@
   "mounts": [
     "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind,consistency=cached"
   ],
+  "containerEnv": {
+    "DEVCONTAINER_WORKSPACE_VOLUME": "${containerWorkspaceFolder}",
+    "HOST_WORKSPACE_VOLUME": "${localWorkspaceFolder}"
+  },
   "remoteUser": "dev",
   "postStartCommand": "shx run/init",
   "customizations": {
