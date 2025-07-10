@@ -23,6 +23,7 @@ jobs:
         with:
           path: |
             .nx
+            .pnpm-store
           key: cache-${{ matrix.platform.os }}
       - uses: docker/login-action@v3
         with:
@@ -44,4 +45,5 @@ jobs:
         with:
           path: |
             .nx
+            .pnpm-store
           key: cache-${{ matrix.platform.os }}-${{ github.run_id }}
