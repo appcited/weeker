@@ -64,7 +64,7 @@ RUN groupmod -g 800 docker && \
 
 ## github cli
 # renovate: source=github-tags name=cli/cli versioning=semver
-ENV GH_VERSION=2.75.1
+ENV GH_VERSION=2.76.1
 RUN ARCH=$(dpkg --print-architecture) && \
     curl -fsSL https://github.com/cli/cli/releases/download/v${GH_VERSION}/gh_${GH_VERSION}_linux_${ARCH}.deb -o /tmp/gh.deb && \
     apt-get install /tmp/gh.deb
