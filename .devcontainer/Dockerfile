@@ -83,6 +83,13 @@ RUN NODE_MAJOR_VERSION=$(echo ${NODE_VERSION} | cut -d. -f1) && \
 ENV PNPM_VERSION=10.13.1
 RUN npm install -g pnpm@${PNPM_VERSION}
 
+# playwright
+# renovate: source=github-tags name=microsoft/playwright versioning=semver
+ENV PLAYWRIGHT_VERSION=1.54.1
+ENV PLAYWRIGHT_BROWSERS_PATH=/usr/local/lib/playwright
+RUN mkdir -p /usr/local/lib/playwright
+RUN pnpx playwright@${PLAYWRIGHT_VERSION} install --with-deps
+
 # cleanup
 RUN apt-get autoremove -y && \
     apt-get clean -y && \

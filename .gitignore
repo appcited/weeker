@@ -26,3 +26,6 @@ node_modules/
 # nuxt
 .nuxt/
 .nitro/
+
+# vitest
+.vitest-attachments/

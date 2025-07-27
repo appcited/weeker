@@ -5,10 +5,16 @@
     "targets": {
       "ci": {},
       "check": {},
-      "build": {}
+      "build": {},
+      "test": {}
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
+  "imports": {
+    "#src/*": "./src/*"
+  },
   "exports": {
     ".": {
       "import": "./dist/index.js",
@@ -18,14 +24,21 @@
     "./style.css": "./dist/style.css"
   },
   "peerDependencies": {
+    "@js-temporal/polyfill": "^0.5.0",
     "vue": "^3.5.0"
   },
   "devDependencies": {
     "@types/node": "^24.0.0",
     "@vitejs/plugin-vue": "^6.0.0",
+    "@vitest/browser": "^4.0.0-beta.4",
+    "@weeker/shared-common": "workspace:*",
+    "@weeker/shared-time": "workspace:*",
     "@weeker/shared-typescript": "workspace:*",
+    "playwright": "^1.54.1",
     "vite": "^7.0.0",
     "vite-plugin-vue-devtools": "^8.0.0",
+    "vitest": "4.0.0-beta.4",
+    "vitest-browser-vue": "^1.0.0",
     "vue-tsc": "^3.0.0"
   }
 }

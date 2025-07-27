@@ -1,0 +1,8 @@
+{
+  "extends": "@weeker/shared-typescript/tsconfig.web.lib.json",
+  "include": ["src/**/*", "src/**/*.json", "src/**/*.vue", "test/**/*"],
+  "compilerOptions": {
+    "rootDir": ".",
+    "outDir": "dist"
+  }
+}
