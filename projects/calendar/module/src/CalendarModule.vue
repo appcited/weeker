@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { weekInterval, now, splitByDay, timestampIntervalString } from "@weeker/shared-time";
-import CalendarGrid from './components/calendar-grid/CalendarGrid.vue';
+import CalendarGrid from './components/grid/CalendarGrid.vue';
 import CalendarTimeBand from './components/time-band/CalendarTimeBand.vue';
 
 const { contextValue = 'now', viewMode = 'week' } = defineProps<{
