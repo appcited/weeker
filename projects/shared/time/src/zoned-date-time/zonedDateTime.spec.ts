@@ -37,5 +37,5 @@ it.each(testCases)("$description", (testCase) => {
     const result = zonedDateTime(testCase.input);
 
     expect(result).toBeInstanceOf(Temporal.ZonedDateTime);
-    expect(result).toStrictEqual(zonedDateTime(testCase.input));
+    expect(result).toStrictEqual(Temporal.ZonedDateTime.from(testCase.input));
 });
