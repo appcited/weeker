@@ -1,6 +1,6 @@
 import { defineConfig } from "vite"
 
-// import packageJson from "./package.json"
+import packageJson from "./package.json"
 
 export default defineConfig({
   build: {
@@ -13,7 +13,7 @@ export default defineConfig({
       entry: "src",
     },
     rollupOptions: {
-      // external: Object.keys(packageJson.peerDependencies).map(lib => new RegExp(`^${lib}`)),
+      external: Object.keys(packageJson.peerDependencies).map(lib => new RegExp(`^${lib}`)),
       output: [
         {
           entryFileNames: "[name].js",
