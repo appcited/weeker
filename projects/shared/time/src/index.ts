@@ -3,7 +3,7 @@ export * from "./day/splitByDay.ts";
 
 export * from "./interval/timestampIntervalString.ts";
 
-export * from "./plain-date-time/now.ts";
+export * from "./instant/now.ts";
 export * from "./plain-date-time/Iso8601PlainDateTime.ts";
 
 export * from "./week/startOfWeek.ts";
