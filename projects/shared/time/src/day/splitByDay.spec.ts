@@ -1,6 +1,6 @@
 import { expect, it } from "vitest"
 
-import { zonedDateTime } from "../zoned-date-time"
+import { zonedDateTime } from "../zoned-date-time/zonedDateTime.ts"
 import { splitByDay } from "./splitByDay"
 
 const testCases = [
