@@ -34,6 +34,7 @@ RUN apt-get install -y --no-install-recommends \
     # for envsubst
     gettext \
     git \
+    git-lfs \
     jq
 
 # shx
