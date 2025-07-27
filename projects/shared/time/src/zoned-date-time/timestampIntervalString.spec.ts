@@ -1,7 +1,7 @@
 import { it, expect } from "vitest";
 import { Temporal } from "@js-temporal/polyfill";
+import type { Interval } from "@weeker/shared-common";
 import { timestampIntervalString } from "./timestampIntervalString.ts";
-import { Interval } from "#src/common/Interval.ts";
 import { zonedDateTime } from "#src/zoned-date-time/zonedDateTime.ts";
 
 const testCases = [
