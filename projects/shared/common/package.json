@@ -1,5 +1,5 @@
 {
-  "name": "@weeker/shared-time",
+  "name": "@weeker/shared-common",
   "type": "module",
   "nx": {
     "targets": {
@@ -21,10 +21,6 @@
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
     }
-  },
-  "peerDependencies": {
-    "@js-temporal/polyfill": "^0.5.0",
-    "@weeker/shared-common": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "^24.0.0",

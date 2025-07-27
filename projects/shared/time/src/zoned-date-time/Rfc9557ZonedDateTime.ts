@@ -1,4 +1,4 @@
-import type { Nominal } from "#src/common/Nominal.ts";
+import type { Nominal } from "@weeker/shared-common";
 
 /**
  * An RFC 9557 compliant zoned date-time format.

@@ -1,5 +1,5 @@
-import type { Interval } from "#src/common/Interval.ts";
 import type { Temporal } from "@js-temporal/polyfill";
+import type { Interval } from "@weeker/shared-common";
 
 /**
  * Converts an {@link Interval} of {@link Temporal.ZonedDateTime} into a string representation of their timestamps in

@@ -1,4 +1,4 @@
-import type { Nominal } from "#src/common/Nominal.ts";
+import type { Nominal } from "@weeker/shared-common";
 
 /**
  * An ISO 8601 combined, extended plain date and time format (without time zone).

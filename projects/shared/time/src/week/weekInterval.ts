@@ -1,6 +1,6 @@
 import type { Temporal } from "@js-temporal/polyfill";
 import { startOfWeek } from "#src/week/startOfWeek.ts";
-import type { Interval } from "#src/index.ts";
+import type { Interval } from "@weeker/shared-common";
 
 /**
  * Returns an {@link Interval<Temporal.ZonedDateTime>} representing the start and end of the week for a given {@link Temporal.ZonedDateTime}.
