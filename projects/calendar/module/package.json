@@ -25,7 +25,7 @@
     "@vitejs/plugin-vue": "^6.0.0",
     "@weeker/shared-typescript": "workspace:*",
     "vite": "^7.0.0",
-    "vite-plugin-vue-devtools": "^7.7.7",
+    "vite-plugin-vue-devtools": "^8.0.0",
     "vue-tsc": "^3.0.0"
   }
 }
