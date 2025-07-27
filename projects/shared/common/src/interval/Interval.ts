@@ -2,6 +2,8 @@
  * A {@link https://en.wikipedia.org/wiki/Interval_(mathematics)#Terminology|closed} {@link https://en.wikipedia.org/wiki/Partially_ordered_set#Intervals|interval}
  * between {@link Interval.start} and {@link Interval.end}
  * 
+ * @example [1, 10] - represents an interval that includes all numbers from 1 to 10, including the endpoints.
+ * 
  * @example
  * ```ts
  * const interval: Interval<number> = { start: 1, end: 10 };
