@@ -45,7 +45,7 @@ RUN curl -fsSL https://raw.githubusercontent.com/appcited/shx/refs/tags/v${SHX_V
 
 # docker
 # renovate: source=github-tags name=docker/cli versioning=semver
-ENV DOCKER_VERSION=28.3.2
+ENV DOCKER_VERSION=28.3.3
 # renovate: source=github-tags name=docker/compose versioning=semver
 ENV DOCKER_COMPOSE_VERSION=2.38.2
 # renovate: source=github-tags name=docker/buildx versioning=semver
