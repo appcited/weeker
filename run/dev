@@ -3,5 +3,4 @@ set -euo pipefail
 
 # needed for nx watch mode: https://github.com/lerna/lerna/issues/4054#issuecomment-2598693480
 export NX_DAEMON=true
-pnpm nx run-many --target start --output-style stream &
-pnpm nx watch --all --includeDependentProjects -- pnpm nx run-many -t ci -p \$NX_PROJECT_NAME --output-style stream
+pnpm nx watch --all --includeDependentProjects -- pnpm nx run-many -t ci --nxBail --tuiAutoExit true -p \$NX_PROJECT_NAME

@@ -1,6 +1,9 @@
 {
   "name": "@weeker/host",
   "type": "module",
+  "scripts": {
+    "start": "nuxt dev --host --inspect"
+  },
   "nx": {
     "targets": {
       "ci": {},

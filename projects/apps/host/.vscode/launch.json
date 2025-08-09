@@ -2,7 +2,19 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Launch Chrome",
+      "name": "Node",
+      "request": "launch",
+      "runtimeArgs": [
+        "start"
+      ],
+      "runtimeExecutable": "npm",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "node"
+    },
+    {
+      "name": "Chrome",
       "request": "launch",
       "type": "chrome",
       "url": "http://localhost:3000",
@@ -12,25 +24,13 @@
         "http://localhost:3000/_nuxt/*": "${workspaceFolder}/projects/apps/host/app/*",
       }
     },
-    {
-      "name": "Attach to Node",
-      "type": "node",
-      "request": "attach",
-      "port": 9229,
-      "restart": true,
-      "localRoot": "${workspaceFolder}",
-      "remoteRoot": "${workspaceFolder}",
-      "skipFiles": [
-        "<node_internals>/**"
-      ]
-    },
   ],
   "compounds": [
     {
       "name": "Debug Client + Server",
       "configurations": [
-        "Launch Chrome",
-        "Attach to Node"
+        "Chrome",
+        "Node"
       ],
       "presentation": {
         "hidden": false,

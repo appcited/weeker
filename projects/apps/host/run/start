@@ -1,4 +1,5 @@
 #!/bin/bash
 set -euo pipefail
 
-pnpm nuxt dev --host --inspect
+# needed for vscode launch.json configuration
+pnpm run start
