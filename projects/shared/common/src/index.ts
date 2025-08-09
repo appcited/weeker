@@ -9,5 +9,7 @@ export * from "./fp/curry.ts";
 export * from "./interval/Interval.ts";
 export * from "./interval/splitIntervalBy.ts";
 
+export * from "./math/minmax.ts";
+
 export * from "./ts/Nominal.ts";
 export * from "./ts/Tagged.ts";
