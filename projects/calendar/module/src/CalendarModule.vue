@@ -3,6 +3,7 @@ import { computed } from 'vue';
 import { weekInterval, now, splitByDay, timestampIntervalString } from "@weeker/shared-time";
 import CalendarGrid from './components/grid/CalendarGrid.vue';
 import CalendarTimeBand from './components/time-band/CalendarTimeBand.vue';
+import CalendarEntry from './components/entry/CalendarEntry.vue';
 
 const { contextValue = 'now', viewMode = 'week' } = defineProps<{
   contextValue?: 'now'
@@ -31,15 +32,19 @@ const intervals = computed(() => [...splitByDay(contextViewModeInterval.value)])
 const gridOptions = computed(() => ({
     keyFn: timestampIntervalString,
 }));
+
+const entries = computed(() => []);
 </script>
 
 <template>
     <CalendarGrid
-        :items="intervals"
         style="height: 100%;"
-        #default="{ item }"
+        :items="intervals"
         :options="gridOptions"
+        #default="{ item }"
     >
-        <CalendarTimeBand :interval="item" />
+        <CalendarTimeBand :interval="item" :entries #default="{ entry }">
+            <CalendarEntry :entry />
+        </CalendarTimeBand>
     </CalendarGrid>
 </template>
