@@ -12,8 +12,8 @@ importers:
         specifier: ^21.2.2
         version: 21.3.9
       nx-mcp:
-        specifier: ^0.4.0
-        version: 0.4.1
+        specifier: ^0.5.0
+        version: 0.5.0
 
 packages:
 
@@ -395,8 +395,8 @@ packages:
     resolution: {integrity: sha512-S48WzZW777zhNIrn7gxOlISNAqi9ZC/uQFnRdbeIHhZhCA6UqpkOT8T1G7BvfdgP4Er8gF4sUbaS0i7QvIfCWw==}
     engines: {node: '>=8'}
 
-  nx-mcp@0.4.1:
-    resolution: {integrity: sha512-qBZZeasEWxoH4JHfR8b3Oh64DJsSaNulWDagpUK8gGzhRbRb9OESB6LSi7t/McQN1skVWqYXTZ7pkLY6jzX/CQ==}
+  nx-mcp@0.5.0:
+    resolution: {integrity: sha512-fCViQR/FV2cYzHt2Gh4UZ12Aeve3m7TDzCGETzolCephvBoaOBz87BuBG+aygNXGaGggzaR0Q4tA76ioRjiOaQ==}
     hasBin: true
 
   nx@21.3.9:
@@ -865,7 +865,7 @@ snapshots:
     dependencies:
       path-key: 3.1.1
 
-  nx-mcp@0.4.1: {}
+  nx-mcp@0.5.0: {}
 
   nx@21.3.9:
     dependencies:
