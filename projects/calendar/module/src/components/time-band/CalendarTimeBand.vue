@@ -14,35 +14,23 @@ function entryPosition(entry: T) {
     const entryEndOffset = entry.end.until(interval.end).total({ unit: 'milliseconds' })
     return {
         top: `${minmax(0, 1, entryStartOffset / duration) * 100}%`,
-        right: 0,
         bottom: `${minmax(0, 1, entryEndOffset / duration) * 100}%`,
-        left: 0,
     }
 }
 </script>
 
 <template>
-    <div style="position: relative;"
+    <div class="relative"
         :data-interval-start="interval.start.epochMilliseconds"
         :data-interval-end="interval.end.epochMilliseconds"
     >
         <div
             v-for="entry in entries"
             :key="entry.id"
-            class="entry"
-            style="position: absolute; overflow: hidden;"
+            class="absolute overflow-hidden w-full [&>*]:h-full"
             :style="entryPosition(entry)"
         >
             <slot :entry />
         </div>
     </div>
 </template>
-
-<style lang="css" scoped>
-.entry {
-    &>* {
-        height: 100%;
-        width: 100%;
-    }
-}
-</style>

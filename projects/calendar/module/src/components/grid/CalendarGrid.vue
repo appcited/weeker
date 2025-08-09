@@ -1,4 +1,4 @@
-<script setup lang="ts" generic="T extends any">
+<script setup lang="ts" generic="T">
 const { items, options } = defineProps<{
     items: T[];
     options: {
@@ -8,10 +8,7 @@ const { items, options } = defineProps<{
 </script>
 
 <template>
-    <div style="display: grid;" :style="{
-        gridTemplateColumns: `repeat(${items.length}, 1fr)`,
-        gridTemplateRows: `1fr`,
-    }">
+    <div class="grid grid-rows-1" :style="{ gridTemplateColumns: `repeat(${items.length}, 1fr)` }">
         <slot v-for="item in items" :key="options.keyFn(item)" :item />
     </div>
 </template>

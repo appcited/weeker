@@ -38,7 +38,7 @@ const entries = computed(() => []);
 
 <template>
     <CalendarGrid
-        style="height: 100%;"
+        class="h-full"
         :items="intervals"
         :options="gridOptions"
         #default="{ item }"
