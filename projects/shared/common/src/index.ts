@@ -13,3 +13,4 @@ export * from "./math/minmax.ts";
 
 export * from "./ts/Nominal.ts";
 export * from "./ts/Tagged.ts";
+export * from "./ts/Idable.ts";
