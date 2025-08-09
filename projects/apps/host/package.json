@@ -23,5 +23,9 @@
     "vue": "^3.5.17",
     "vue-router": "^4.5.1",
     "vue-tsc": "^3.0.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.11",
+    "tailwindcss": "^4.1.11"
   }
 }
