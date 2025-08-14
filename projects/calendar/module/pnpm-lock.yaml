@@ -44,7 +44,7 @@ importers:
         version: 1.54.2
       tailwindcss:
         specifier: ^4.1.11
-        version: 4.1.11
+        version: 4.1.12
       vite:
         specifier: ^7.0.0
         version: 7.1.2(@types/node@24.2.1)(jiti@2.5.1)(lightningcss@1.30.1)
