@@ -1,0 +1,34 @@
+{
+  "name": "@weeker/shared-api",
+  "type": "module",
+  "nx": {
+    "targets": {
+      "ci": {},
+      "check": {},
+      "build": {}
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "imports": {
+    "#src/*": "./src/*"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "peerDependencies": {
+    "@orpc/contract": "^1.8.0",
+    "zod": "^4.0.17"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@weeker/shared-typescript": "workspace:*",
+    "typescript": "~5.9.0",
+    "vite": "^7.0.0"
+  }
+}
