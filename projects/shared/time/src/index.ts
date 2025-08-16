@@ -1,6 +1,8 @@
 export * from "./day/endOfDay.ts";
 export * from "./day/splitByDay.ts";
 
+export * from "./instant/instant.ts";
+
 export * from "./interval/timestampIntervalString.ts";
 
 export * from "./instant/now.ts";
