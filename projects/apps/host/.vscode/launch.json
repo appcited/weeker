@@ -4,10 +4,12 @@
     {
       "name": "Node",
       "request": "launch",
+      "runtimeExecutable": "nuxt",
       "runtimeArgs": [
-        "start"
+        "dev",
+        "--host",
+        "--inspect"
       ],
-      "runtimeExecutable": "npm",
       "skipFiles": [
         "<node_internals>/**"
       ],
