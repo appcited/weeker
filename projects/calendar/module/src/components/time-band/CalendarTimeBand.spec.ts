@@ -54,6 +54,20 @@ it('sets data-interval-end attribute to interval end epochMilliseconds', async (
     .toHaveAttribute("data-interval-end", renderOptions.props.interval.end.epochMilliseconds.toString())
 })
 
+it('accepts prop entries to be undefined', async () => {
+  const renderOptions = {
+    ...defaultRenderOptions(),
+    props: {
+      ...defaultRenderOptions().props,
+      entries: undefined
+    },
+  }
+
+  render(CalendarTimeBand, renderOptions)
+
+  expect(renderOptions.slots.default).not.toHaveBeenCalled()
+})
+
 it('passes entry to default slot', async () => {
   const renderOptions = defaultRenderOptions()
   render(CalendarTimeBand, renderOptions)

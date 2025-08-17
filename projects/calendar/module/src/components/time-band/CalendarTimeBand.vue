@@ -4,7 +4,7 @@ import { type Interval, type Idable, minmax } from "@weeker/shared-common";
 
 const { interval } = defineProps<{
     interval: Interval<Temporal.ZonedDateTime>;
-    entries: T[];
+    entries?: T[];
 }>();
 
 function entryPosition(entry: T) {
