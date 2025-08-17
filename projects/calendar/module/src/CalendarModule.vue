@@ -8,8 +8,8 @@ import { getClient } from "@weeker/shared-api-client";
 import CalendarGrid from './components/grid/CalendarGrid.vue';
 import CalendarTimeBand from './components/time-band/CalendarTimeBand.vue';
 import CalendarEntry from './components/entry/CalendarEntry.vue';
-import { EntryServiceImpl } from './model/EntryServiceImpl.ts';
-import type { EntryService } from './model/EntryService.ts';
+import { EntryServiceImpl } from './model/entry/EntryServiceImpl.ts';
+import type { EntryService } from './model/entry/EntryService.ts';
 
 const { contextValue = 'now', viewMode = 'week' } = defineProps<{
   contextValue?: 'now'

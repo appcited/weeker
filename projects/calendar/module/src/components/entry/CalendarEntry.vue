@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Entry } from '#src/model/Entry.ts';
+import type { Entry } from '#src/model/entry/Entry.ts';
 
 const { entry } = defineProps<{
   entry: Entry
