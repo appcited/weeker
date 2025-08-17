@@ -1,7 +1,7 @@
 import { type Implementer } from "@orpc/server"
 import { contract } from "@weeker/shared-api"
 
-type ContractImplementer = Implementer<typeof contract,  Record<never, never>,  Record<never, never>>
+type ContractImplementer = Implementer<typeof contract, Record<never, never>, Record<never, never>>
 type EntriesListHandler = Parameters<ContractImplementer["entries"]["list"]["handler"]>[0]
 
 export const entriesListHandler: EntriesListHandler = async ({ }) => {
