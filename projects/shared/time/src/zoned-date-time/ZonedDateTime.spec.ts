@@ -1,6 +1,6 @@
 import { it, expect } from "vitest";
 import { Temporal } from "@js-temporal/polyfill";
-import { zonedDateTime } from "./zonedDateTime.ts";
+import { zonedDateTime } from "./ZonedDateTime.ts";
 
 const testCases = [
     {

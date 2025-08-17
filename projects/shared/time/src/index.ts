@@ -12,4 +12,4 @@ export * from "./week/startOfWeek.ts";
 export * from "./week/weekInterval.ts";
 
 export * from "./zoned-date-time/Rfc9557ZonedDateTime.ts";
-export * from "./zoned-date-time/zonedDateTime.ts";
+export * from "./zoned-date-time/ZonedDateTime.ts";

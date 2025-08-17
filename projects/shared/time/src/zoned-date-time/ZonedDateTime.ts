@@ -1,6 +1,8 @@
 import { Temporal } from "@js-temporal/polyfill";
 import type { Rfc9557ZonedDateTime } from "./Rfc9557ZonedDateTime.ts";
 
+export type ZonedDateTime = Temporal.ZonedDateTime
+
 /**
  * Creates a {@link Temporal.ZonedDateTime} instance from a {@link Temporal.ZonedDateTimeLike} or an
  * {@link Rfc9557ZonedDateTime} string.
