@@ -1,9 +1,6 @@
 {
   "name": "@weeker/host",
   "type": "module",
-  "scripts": {
-    "start": "nuxt dev --host --inspect"
-  },
   "nx": {
     "targets": {
       "ci": {},
@@ -16,8 +13,15 @@
     }
   },
   "dependencies": {
+    "@orpc/client": "^1.8.0",
+    "@orpc/contract": "^1.8.0",
+    "@orpc/openapi": "^1.8.0",
+    "@orpc/server": "^1.8.0",
+    "@tanstack/vue-query": "^5.83.1",
     "@weeker/about-module": "workspace:*",
     "@weeker/calendar-module": "workspace:*",
+    "@weeker/calendar-backend": "workspace:*",
+    "@weeker/shared-api": "workspace:*",
     "@weeker/shared-logo": "workspace:*",
     "nuxt": "^4.0.0-rc.0",
     "vue": "^3.5.17",
