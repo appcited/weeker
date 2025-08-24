@@ -49,7 +49,7 @@ ENV DOCKER_VERSION=28.3.3
 # renovate: source=github-tags name=docker/compose versioning=semver
 ENV DOCKER_COMPOSE_VERSION=2.38.2
 # renovate: source=github-tags name=docker/buildx versioning=semver
-ENV DOCKER_BUILDX_VERSION=0.26.1
+ENV DOCKER_BUILDX_VERSION=0.27.0
 RUN curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add - && \
     echo "deb https://download.docker.com/linux/debian $(lsb_release -cs) stable" > /etc/apt/sources.list.d/docker.list && \
     apt-get update && \
