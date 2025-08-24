@@ -2,11 +2,16 @@ export * from "./day/endOfDay.ts";
 export * from "./day/splitByDay.ts";
 
 export * from "./instant/instant.ts";
+export * from "./instant/now.ts";
 
 export * from "./interval/timestampIntervalString.ts";
 
-export * from "./instant/now.ts";
 export * from "./plain-date-time/Iso8601PlainDateTime.ts";
+
+export * from "./plain-time/Iso8601PlainTime.ts";
+export * from "./plain-time/PlainTime.ts";
+
+export * from "./time-zone/IanaTimeZone.ts"
 
 export * from "./timestamp/EpochMilliseconds.ts";
 
