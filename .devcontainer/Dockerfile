@@ -85,7 +85,7 @@ RUN npm install -g pnpm@${PNPM_VERSION}
 
 # playwright
 # renovate: source=github-tags name=microsoft/playwright versioning=semver
-ENV PLAYWRIGHT_VERSION=1.54.2
+ENV PLAYWRIGHT_VERSION=1.55.0
 ENV PLAYWRIGHT_BROWSERS_PATH=/usr/local/lib/playwright
 RUN mkdir -p /usr/local/lib/playwright
 RUN pnpx playwright@${PLAYWRIGHT_VERSION} install --with-deps
