@@ -103,6 +103,12 @@
       "matchPackageNames": [
         "/^@vueuse/*/"
       ]
+    },
+    {
+      "groupName": "orpc",
+      "matchPackageNames": [
+        "/^@orpc/*/"
+      ]
     }
   ],
   "customManagers": [
