@@ -1,6 +1,6 @@
 import { it, expect } from "vitest";
 import { weekInterval } from "./weekInterval.ts";
-import { zonedDateTime } from "#src/zoned-date-time/zonedDateTime.ts";
+import { zonedDateTime } from "#src/zoned-date-time/ZonedDateTime.ts";
 
 const testCases = [
     {

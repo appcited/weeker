@@ -1,7 +1,7 @@
 import { expect, it } from "vitest"
 
 import { endOfDay } from "./endOfDay"
-import { zonedDateTime } from "#src/zoned-date-time/zonedDateTime.ts";
+import { zonedDateTime } from "#src/zoned-date-time/ZonedDateTime.ts";
 
 const testCases = [
   {

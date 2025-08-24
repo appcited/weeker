@@ -8,6 +8,8 @@ export * from "./interval/timestampIntervalString.ts";
 export * from "./instant/now.ts";
 export * from "./plain-date-time/Iso8601PlainDateTime.ts";
 
+export * from "./timestamp/EpochMilliseconds.ts";
+
 export * from "./week/startOfWeek.ts";
 export * from "./week/weekInterval.ts";
 
