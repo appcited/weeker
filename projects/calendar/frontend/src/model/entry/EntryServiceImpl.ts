@@ -1,12 +1,13 @@
 import type { Temporal } from "@js-temporal/polyfill";
-import type { Client } from "@weeker/shared-api-client";
 import type { Interval } from "@weeker/shared-common";
 import type { EntryService } from "./EntryService.ts";
+import type { contract } from "@weeker/shared-api";
+import type { ContractRouterClient } from "@orpc/contract";
 
 export class EntryServiceImpl implements EntryService {
-  private client: Client;
+  private client: ContractRouterClient<typeof contract>;
 
-  constructor(client: Client) {
+  constructor(client: ContractRouterClient<typeof contract>) {
     this.client = client;
   }
 

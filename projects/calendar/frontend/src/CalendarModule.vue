@@ -3,13 +3,16 @@ import { computed } from 'vue';
 import { useQuery } from '@tanstack/vue-query'
 
 import { weekInterval, now, splitByDay } from "@weeker/shared-time";
-import { getClient } from "@weeker/shared-api-client";
 
 import CalendarGrid from './components/grid/CalendarGrid.vue';
 import CalendarTimeBand from './components/time-band/CalendarTimeBand.vue';
 import CalendarEntry from './components/entry/CalendarEntry.vue';
 import { EntryServiceImpl } from './model/entry/EntryServiceImpl.ts';
 import type { EntryService } from './model/entry/EntryService.ts';
+import { OpenAPILink } from '@orpc/openapi-client/fetch';
+import { createORPCClient } from '@orpc/client';
+import { contract } from '@weeker/shared-api';
+import type { ContractRouterClient } from '@orpc/contract';
 
 const { contextValue = 'now', viewMode = 'week' } = defineProps<{
   contextValue?: 'now'
@@ -17,7 +20,10 @@ const { contextValue = 'now', viewMode = 'week' } = defineProps<{
 }>()
 
 // TODO: use provide / inject
-const client = getClient({ baseUrl: 'http://localhost:3000/api' });
+const link = new OpenAPILink(contract, {
+    url: "http://localhost:3000/api",
+})
+const client = createORPCClient<ContractRouterClient<typeof contract>>(link);
 const entryService: EntryService = new EntryServiceImpl(client);
 
 const viewOptions = {
