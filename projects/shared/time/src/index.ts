@@ -15,6 +15,7 @@ export * from "./timestamp/EpochMilliseconds.ts";
 
 export * from "./week/startOfWeek.ts";
 export * from "./week/weekInterval.ts";
+export * from "./week/Iso8601Weekday.ts";
 
 export * from "./zoned-date-time/Rfc9557ZonedDateTime.ts";
 export * from "./zoned-date-time/ZonedDateTime.ts";
