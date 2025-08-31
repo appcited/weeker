@@ -9,8 +9,8 @@ const renderOptions: RenderOptions = {
     entry: {
       id: "9ed12927-7e76-4866-ab1b-f0698ca1312f",
       name: "Entry Name",
-      start: zonedDateTime("2024-09-19T09:00:00[Europe/Berlin]"),
-      end: zonedDateTime("2024-09-19T19:00:00[Europe/Berlin]"),
+      start: zonedDateTime("2024-09-19T09:00:00[Europe/Berlin]").epochMilliseconds,
+      end: zonedDateTime("2024-09-19T19:00:00[Europe/Berlin]").epochMilliseconds,
       color: "#ff0000",
     },
     style: {

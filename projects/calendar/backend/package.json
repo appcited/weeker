@@ -24,6 +24,7 @@
   "peerDependencies": {
     "@orpc/server": "^1.8.0",
     "@weeker/shared-api": "workspace:*",
+    "@weeker/shared-time": "workspace:*",
     "zod": "^4.0.17"
   },
   "devDependencies": {

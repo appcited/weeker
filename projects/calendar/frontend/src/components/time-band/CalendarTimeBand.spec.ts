@@ -8,17 +8,17 @@ const defaultRenderOptions = () => ({
   props: {
     entries: [{
       id: '1',
-      start: zonedDateTime('2025-07-27T02:00:00[Europe/Berlin]'),
-      end: zonedDateTime('2025-07-27T12:00:00[Europe/Berlin]')
+      start: zonedDateTime('2025-07-27T02:00:00[Europe/Berlin]').epochMilliseconds,
+      end: zonedDateTime('2025-07-27T12:00:00[Europe/Berlin]').epochMilliseconds
     },
     {
       id: '2',
-      start: zonedDateTime('2025-07-27T14:00:00[Europe/Berlin]'),
-      end: zonedDateTime('2025-07-27T18:00:00[Europe/Berlin]')
+      start: zonedDateTime('2025-07-27T14:00:00[Europe/Berlin]').epochMilliseconds,
+      end: zonedDateTime('2025-07-27T18:00:00[Europe/Berlin]').epochMilliseconds
     }],
     interval: {
-      start: zonedDateTime('2025-07-27T00:00:00[Europe/Berlin]'),
-      end: zonedDateTime('2025-07-28T00:00:00[Europe/Berlin]'),
+      start: zonedDateTime('2025-07-27T00:00:00[Europe/Berlin]').epochMilliseconds,
+      end: zonedDateTime('2025-07-28T00:00:00[Europe/Berlin]').epochMilliseconds,
     }
   },
   slots: {
@@ -42,7 +42,7 @@ it('sets data-interval-start attribute to interval start epochMilliseconds', asy
 
   await expect
     .element(component.container.children[0])
-    .toHaveAttribute("data-interval-start", renderOptions.props.interval.start.epochMilliseconds.toString())
+    .toHaveAttribute("data-interval-start", renderOptions.props.interval.start.toString())
 })
 
 it('sets data-interval-end attribute to interval end epochMilliseconds', async () => {
@@ -51,7 +51,7 @@ it('sets data-interval-end attribute to interval end epochMilliseconds', async (
 
   await expect
     .element(component.container.children[0])
-    .toHaveAttribute("data-interval-end", renderOptions.props.interval.end.epochMilliseconds.toString())
+    .toHaveAttribute("data-interval-end", renderOptions.props.interval.end.toString())
 })
 
 it('accepts prop entries to be undefined', async () => {

@@ -2,7 +2,7 @@
 import { computed } from 'vue';
 import { useQuery } from '@tanstack/vue-query'
 
-import { weekInterval, now, splitByDay, timestampIntervalString } from "@weeker/shared-time";
+import { weekInterval, now, splitByDay } from "@weeker/shared-time";
 import { getClient } from "@weeker/shared-api-client";
 
 import CalendarGrid from './components/grid/CalendarGrid.vue';
@@ -38,7 +38,10 @@ const contextViewModeInterval = computed(() => {
     }
 });
 
-const gridIntervals = computed(() => splitByDay(contextViewModeInterval.value).toArray());
+const gridIntervals = computed(() => splitByDay(contextViewModeInterval.value).toArray().map(interval => ({
+  start: interval.start.epochMilliseconds,
+  end: interval.end.epochMilliseconds,
+})));
 
 const { data: entries } = useQuery({
   queryKey: ['entries'],
@@ -51,8 +54,8 @@ const { data: entries } = useQuery({
         class="h-full"
         :items="gridIntervals"
         :options="{
-          keyFn: timestampIntervalString,
-        }"    
+          keyFn: (item) => `${item.start}/${item.end}`,
+        }"
         #default="{ item }"
     >
         <CalendarTimeBand :interval="item" :entries #default="{ entry }">

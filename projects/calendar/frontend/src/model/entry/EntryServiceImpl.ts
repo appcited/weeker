@@ -1,7 +1,6 @@
 import type { Temporal } from "@js-temporal/polyfill";
 import type { Client } from "@weeker/shared-api-client";
 import type { Interval } from "@weeker/shared-common";
-import { zonedDateTime } from "@weeker/shared-time";
 import type { EntryService } from "./EntryService.ts";
 
 export class EntryServiceImpl implements EntryService {
@@ -20,8 +19,8 @@ export class EntryServiceImpl implements EntryService {
       id: entry.id,
       name: entry.name,
       color: entry.color,
-      start: zonedDateTime(entry.start),
-      end: zonedDateTime(entry.end),
+      start: entry.start,
+      end: entry.end,
     }));
   }
 }
