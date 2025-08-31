@@ -1,5 +1,5 @@
 import { type Implementer } from "@orpc/server"
-import { contract } from "@weeker/shared-api"
+import { contract } from "@weeker/api"
 import { now } from "@weeker/shared-time"
 
 type ContractImplementer = Implementer<typeof contract, Record<never, never>, Record<never, never>>

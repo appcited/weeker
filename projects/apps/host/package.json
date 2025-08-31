@@ -21,7 +21,7 @@
     "@weeker/about-module": "workspace:*",
     "@weeker/calendar-frontend": "workspace:*",
     "@weeker/calendar-backend": "workspace:*",
-    "@weeker/shared-api": "workspace:*",
+    "@weeker/api": "workspace:*",
     "@weeker/shared-logo": "workspace:*",
     "nuxt": "^4.0.0-rc.0",
     "vue": "^3.5.17",

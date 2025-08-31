@@ -23,9 +23,9 @@ importers:
       '@tanstack/vue-query':
         specifier: ^5.83.1
         version: 5.85.6(vue@3.5.20(typescript@5.9.2))
-      '@weeker/shared-api':
+      '@weeker/api':
         specifier: workspace:*
-        version: link:../../shared/api
+        version: link:../../api
       vue:
         specifier: ^3.5.0
         version: 3.5.20(typescript@5.9.2)

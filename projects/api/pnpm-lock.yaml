@@ -20,7 +20,7 @@ importers:
         version: 24.3.0
       '@weeker/shared-typescript':
         specifier: workspace:*
-        version: link:../typescript
+        version: link:../shared/typescript
       typescript:
         specifier: ~5.9.0
         version: 5.9.2

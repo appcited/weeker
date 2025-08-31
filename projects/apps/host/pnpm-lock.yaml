@@ -26,15 +26,15 @@ importers:
       '@weeker/about-module':
         specifier: workspace:*
         version: link:../../about/module
+      '@weeker/api':
+        specifier: workspace:*
+        version: link:../../api
       '@weeker/calendar-backend':
         specifier: workspace:*
         version: link:../../calendar/backend
       '@weeker/calendar-frontend':
         specifier: workspace:*
         version: link:../../calendar/frontend
-      '@weeker/shared-api':
-        specifier: workspace:*
-        version: link:../../shared/api
       '@weeker/shared-logo':
         specifier: workspace:*
         version: link:../../shared/logo

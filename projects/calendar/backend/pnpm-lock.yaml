@@ -11,9 +11,9 @@ importers:
       '@orpc/server':
         specifier: ^1.8.0
         version: 1.8.5
-      '@weeker/shared-api':
+      '@weeker/api':
         specifier: workspace:*
-        version: link:../../shared/api
+        version: link:../../api
       '@weeker/shared-time':
         specifier: workspace:*
         version: link:../../shared/time

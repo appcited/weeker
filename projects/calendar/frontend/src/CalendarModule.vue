@@ -11,7 +11,7 @@ import { EntryServiceImpl } from './model/entry/EntryServiceImpl.ts';
 import type { EntryService } from './model/entry/EntryService.ts';
 import { OpenAPILink } from '@orpc/openapi-client/fetch';
 import { createORPCClient } from '@orpc/client';
-import { contract } from '@weeker/shared-api';
+import { contract } from '@weeker/api';
 import type { ContractRouterClient } from '@orpc/contract';
 
 const { contextValue = 'now', viewMode = 'week' } = defineProps<{

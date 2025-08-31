@@ -1,6 +1,6 @@
 import { OpenAPIHandler } from "@orpc/openapi/node"
 import { implement } from "@orpc/server"
-import { contract } from "@weeker/shared-api"
+import { contract } from "@weeker/api"
 import { entriesListHandler } from "@weeker/calendar-backend"
 
 const os = implement(contract)

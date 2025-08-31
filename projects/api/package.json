@@ -1,5 +1,5 @@
 {
-  "name": "@weeker/shared-api",
+  "name": "@weeker/api",
   "type": "module",
   "nx": {
     "targets": {
