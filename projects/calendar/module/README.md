@@ -1,1 +1,0 @@
-# @weeker/calendar-module

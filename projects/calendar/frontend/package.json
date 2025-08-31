@@ -1,5 +1,5 @@
 {
-  "name": "@weeker/calendar-module",
+  "name": "@weeker/calendar-frontend",
   "type": "module",
   "nx": {
     "targets": {

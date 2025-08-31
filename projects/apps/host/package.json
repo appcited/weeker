@@ -19,7 +19,7 @@
     "@orpc/server": "^1.8.0",
     "@tanstack/vue-query": "^5.83.1",
     "@weeker/about-module": "workspace:*",
-    "@weeker/calendar-module": "workspace:*",
+    "@weeker/calendar-frontend": "workspace:*",
     "@weeker/calendar-backend": "workspace:*",
     "@weeker/shared-api": "workspace:*",
     "@weeker/shared-logo": "workspace:*",

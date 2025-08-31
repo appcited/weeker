@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { CalendarModule } from '@weeker/calendar-module'
-import '@weeker/calendar-module/style.css'
+import { CalendarModule } from '@weeker/calendar-frontend'
+import '@weeker/calendar-frontend/style.css'
 </script>
 
 <template>

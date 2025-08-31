@@ -29,9 +29,9 @@ importers:
       '@weeker/calendar-backend':
         specifier: workspace:*
         version: link:../../calendar/backend
-      '@weeker/calendar-module':
+      '@weeker/calendar-frontend':
         specifier: workspace:*
-        version: link:../../calendar/module
+        version: link:../../calendar/frontend
       '@weeker/shared-api':
         specifier: workspace:*
         version: link:../../shared/api
