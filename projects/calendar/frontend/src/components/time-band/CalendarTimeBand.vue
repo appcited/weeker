@@ -1,8 +1,9 @@
-<script setup lang="ts" generic="T extends Idable & Interval<EpochTimeStamp>">
+<script setup lang="ts" generic="T extends Idable & Interval<EpochMilliseconds>">
 import { type Interval, type Idable, minmax } from "@weeker/shared-common";
+import type { EpochMilliseconds } from "@weeker/shared-time";
 
 const { interval } = defineProps<{
-    interval: Interval<EpochTimeStamp>;
+    interval: Interval<EpochMilliseconds>;
     entries?: T[];
 }>();
 
