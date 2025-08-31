@@ -1,7 +1,7 @@
 import type { Tagged } from "@weeker/shared-common";
 
 /**
- * A Unix epoch timestamp expressed in milliseconds.
+ * An Unix epoch timestamp expressed in milliseconds.
  *
  * Represents the number of whole milliseconds elapsed since the Unix epoch
  * (1970-01-01T00:00:00Z, UTC), not counting leap seconds.
@@ -13,7 +13,7 @@ import type { Tagged } from "@weeker/shared-common";
  * - Stored as a JavaScript `number` (IEEE-754 double); safe up to ±8.64e15 ms (~285,616 years).
  *
  * @example
- *   const now: Timestamp = Date.now() as Timestamp
- *   const specific: Timestamp = 1735061405000 as Timestamp // 2024-12-24T15:30:05.000Z
+ *   const now: EpochMilliseconds = Date.now()
+ *   const specific: EpochMilliseconds = 1735061405000 // 2024-12-24T15:30:05.000Z
  */
-export type EpochMilliseconds = number & Tagged<"Timestamp">
+export type EpochMilliseconds = number & Tagged<"EpochMilliseconds">
