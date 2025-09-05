@@ -72,7 +72,7 @@ RUN ARCH=$(dpkg --print-architecture) && \
 
 # dbmate
 # renovate: source=github-tags name=amacneil/dbmate versioning=semver
-ENV DBMATE_VERSION=2.27.0
+ENV DBMATE_VERSION=2.28.0
 RUN ARCH=$(dpkg --print-architecture) && \
     curl -fsSL -o /usr/local/bin/dbmate https://github.com/amacneil/dbmate/releases/download/v${DBMATE_VERSION}/dbmate-linux-${ARCH} && \
     chmod +x /usr/local/bin/dbmate
