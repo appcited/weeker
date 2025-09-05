@@ -1,0 +1,31 @@
+services:
+  devcontainer:
+    hostname: devcontainer
+    image: ghcr.io/appcited/weeker/devcontainer:latest-amd64
+    build:
+      dockerfile: Dockerfile
+      context: .
+      args:
+        DOCKER_BUILDKIT: 1
+        BUILDKIT_INLINE_CACHE: 1
+      cache_from:
+        - ghcr.io/appcited/weeker/devcontainer:latest-amd64
+    # overrides default command to avoid a shutdown of container before vscode established a connection
+    # https://code.visualstudio.com/docs/remote/create-dev-container#_extend-your-docker-compose-file-for-development
+    entrypoint: ["bash", "-c", "while sleep 1000; do :; done"]
+    env_file:
+      - .env
+    volumes:
+      - ..:/workspaces/weeker
+      - /var/run/docker.sock:/var/run/docker.sock
+  postgres:
+    hostname: ${POSTGRES_HOST}
+    image: postgres:17.2
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    ports:
+      - ${POSTGRES_PORT}:5432
+    tmpfs:
+      # use tmpfs for a clean db on every start
+      - /var/lib/postgresql/data

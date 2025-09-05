@@ -1,10 +1,8 @@
 {
   "$schema": "https://raw.githubusercontent.com/devcontainers/spec/main/schemas/devContainer.schema.json",
-  "name": "Dev Container",
-  "build": {
-    "dockerfile": "Dockerfile",
-    "context": "."
-  },
+  "service": "devcontainer",
+  "dockerComposeFile": "compose.yaml",
+  "workspaceFolder": "/workspaces/weeker",
   "mounts": [
     "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind,consistency=cached"
   ],
@@ -12,7 +10,6 @@
     "DEVCONTAINER_WORKSPACE_VOLUME": "${containerWorkspaceFolder}",
     "HOST_WORKSPACE_VOLUME": "${localWorkspaceFolder}"
   },
-  "remoteUser": "dev",
   "postStartCommand": "shx run/init",
   "customizations": {
     "vscode": {
