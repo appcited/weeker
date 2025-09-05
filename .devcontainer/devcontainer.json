@@ -18,7 +18,8 @@
         "nrwl.angular-console",
         "ms-azuretools.vscode-containers",
         "GitHub.vscode-pull-request-github",
-        "bradlc.vscode-tailwindcss"
+        "bradlc.vscode-tailwindcss",
+        "cweijan.vscode-postgresql-client2"
       ],
       "settings": {
         "github.copilot.chat.codeGeneration.useInstructionFiles": true,
