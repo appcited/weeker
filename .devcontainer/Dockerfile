@@ -40,7 +40,7 @@ RUN apt-get install -y --no-install-recommends \
 # shx
 # renovate: source=github-tags name=appcited/shx versioning=semver
 ENV SHX_VERSION=0.1.0
-RUN curl -fsSL https://raw.githubusercontent.com/appcited/shx/refs/tags/v${SHX_VERSION}/shx -o /usr/local/bin/shx && \
+RUN curl -fsSL -o /usr/local/bin/shx https://raw.githubusercontent.com/appcited/shx/refs/tags/v${SHX_VERSION}/shx && \
     chmod +x /usr/local/bin/shx
 
 # docker
@@ -63,12 +63,19 @@ RUN curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add - && \
 RUN groupmod -g 800 docker && \
     usermod -aG docker ${NON_ROOT_USER}
 
-## github cli
+# github cli
 # renovate: source=github-tags name=cli/cli versioning=semver
 ENV GH_VERSION=2.78.0
 RUN ARCH=$(dpkg --print-architecture) && \
     curl -fsSL https://github.com/cli/cli/releases/download/v${GH_VERSION}/gh_${GH_VERSION}_linux_${ARCH}.deb -o /tmp/gh.deb && \
     apt-get install /tmp/gh.deb
+
+# dbmate
+# renovate: source=github-tags name=amacneil/dbmate versioning=semver
+ENV DBMATE_VERSION=2.27.0
+RUN ARCH=$(dpkg --print-architecture) && \
+    curl -fsSL -o /usr/local/bin/dbmate https://github.com/amacneil/dbmate/releases/download/v${DBMATE_VERSION}/dbmate-linux-${ARCH} && \
+    chmod +x /usr/local/bin/dbmate
 
 # node.js
 # renovate: source=github-tags name=nodejs/node versioning=semver
