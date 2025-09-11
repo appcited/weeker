@@ -17,7 +17,7 @@ importers:
         version: 24.3.1
       '@types/ramda':
         specifier: ^0.31.0
-        version: 0.31.0
+        version: 0.31.1
       '@weeker/shared-typescript':
         specifier: workspace:*
         version: link:../typescript
@@ -309,8 +309,8 @@ packages:
   '@types/node@24.3.1':
     resolution: {integrity: sha512-3vXmQDXy+woz+gnrTvuvNrPzekOi+Ds0ReMxw0LzBiK3a+1k0kQn9f2NWk+lgD4rJehFUmYy2gMhJ2ZI+7YP9g==}
 
-  '@types/ramda@0.31.0':
-    resolution: {integrity: sha512-1lWWZ/2YiNttGcIUxQwnvMuh55GIEbn/zlpzzEojAsbxquI/TXQZCRaXsfxG1CHjlqGoqxWePkvaM/5qYHNuvQ==}
+  '@types/ramda@0.31.1':
+    resolution: {integrity: sha512-Vt6sFXnuRpzaEj+yeutA0q3bcAsK7wdPuASIzR9LXqL4gJPyFw8im9qchlbp4ltuf3kDEIRmPJTD/Fkg60dn7g==}
 
   '@vitest/expect@4.0.0-beta.9':
     resolution: {integrity: sha512-gt34h5GvmtHvRlhSoGUVGDgR0DHBZrGmRM5Jr2za6FcwA93weXIoBMbJmp9TwSor9FRDyzumY+INVJ0LXfXqwg==}
@@ -704,7 +704,7 @@ snapshots:
     dependencies:
       undici-types: 7.10.0
 
-  '@types/ramda@0.31.0':
+  '@types/ramda@0.31.1':
     dependencies:
       types-ramda: 0.31.0
 
