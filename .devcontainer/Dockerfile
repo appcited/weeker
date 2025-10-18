@@ -47,7 +47,7 @@ RUN curl -fsSL https://raw.githubusercontent.com/appcited/shx/refs/tags/v${SHX_V
 # renovate: source=github-tags name=docker/cli versioning=semver
 ENV DOCKER_VERSION=28.4.0
 # renovate: source=github-tags name=docker/compose versioning=semver
-ENV DOCKER_COMPOSE_VERSION=2.39.2
+ENV DOCKER_COMPOSE_VERSION=2.40.1
 # renovate: source=github-tags name=docker/buildx versioning=semver
 ENV DOCKER_BUILDX_VERSION=0.26.1
 RUN curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add - && \
