@@ -26,7 +26,7 @@ importers:
         version: 5.9.3
       vite:
         specifier: ^7.0.0
-        version: 7.1.10(@types/node@24.3.1)
+        version: 7.1.12(@types/node@24.3.1)
       vitest:
         specifier: ^4.0.0-beta.4
         version: 4.0.0-beta.9(@types/node@24.3.1)
@@ -474,8 +474,8 @@ packages:
   undici-types@7.10.0:
     resolution: {integrity: sha512-t5Fy/nfn+14LuOc2KNYg75vZqClpAiqscVvMygNnlsHBFpSXdJaYtXMcdNLpl/Qvc3P2cB3s6lOV51nqsFq4ag==}
 
-  vite@7.1.10:
-    resolution: {integrity: sha512-CmuvUBzVJ/e3HGxhg6cYk88NGgTnBoOo7ogtfJJ0fefUWAxN/WDSUa50o+oVBxuIhO8FoEZW0j2eW7sfjs5EtA==}
+  vite@7.1.12:
+    resolution: {integrity: sha512-ZWyE8YXEXqJrrSLvYgrRP7p62OziLW7xI5HYGWFzOvupfAlrLvURSzv/FyGyy0eidogEM3ujU+kUG1zuHgb6Ug==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
@@ -719,13 +719,13 @@ snapshots:
       chai: 6.0.1
       tinyrainbow: 2.0.0
 
-  '@vitest/mocker@4.0.0-beta.9(vite@7.1.10(@types/node@24.3.1))':
+  '@vitest/mocker@4.0.0-beta.9(vite@7.1.12(@types/node@24.3.1))':
     dependencies:
       '@vitest/spy': 4.0.0-beta.9
       estree-walker: 3.0.3
       magic-string: 0.30.18
     optionalDependencies:
-      vite: 7.1.10(@types/node@24.3.1)
+      vite: 7.1.12(@types/node@24.3.1)
 
   '@vitest/pretty-format@4.0.0-beta.9':
     dependencies:
@@ -889,7 +889,7 @@ snapshots:
 
   undici-types@7.10.0: {}
 
-  vite@7.1.10(@types/node@24.3.1):
+  vite@7.1.12(@types/node@24.3.1):
     dependencies:
       esbuild: 0.25.11
       fdir: 6.5.0(picomatch@4.0.3)
@@ -904,7 +904,7 @@ snapshots:
   vitest@4.0.0-beta.9(@types/node@24.3.1):
     dependencies:
       '@vitest/expect': 4.0.0-beta.9
-      '@vitest/mocker': 4.0.0-beta.9(vite@7.1.10(@types/node@24.3.1))
+      '@vitest/mocker': 4.0.0-beta.9(vite@7.1.12(@types/node@24.3.1))
       '@vitest/pretty-format': 4.0.0-beta.9
       '@vitest/runner': 4.0.0-beta.9
       '@vitest/snapshot': 4.0.0-beta.9
@@ -922,7 +922,7 @@ snapshots:
       tinyglobby: 0.2.14
       tinypool: 1.1.1
       tinyrainbow: 2.0.0
-      vite: 7.1.10(@types/node@24.3.1)
+      vite: 7.1.12(@types/node@24.3.1)
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 24.3.1
